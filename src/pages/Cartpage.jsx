@@ -11,9 +11,9 @@ const Cartpage = () => {
         <div className="page">
             <div style={{height:"3rem"}}></div>
             <div className="cartflex">
-               {(cart && cart.length>0) ? cart.map(item=>( <div className="cart">
+               {(cart && cart.length>0) ? cart.map(item=>( <div key={item.id} className="cart">
                     <div className="image">
-                        <img src={item.image} alt={item.name} />
+                        <img src={require(`../images/${item.image}.avif`)} alt={item.name} />
                     </div>
                     <div className="details">
                         <p className="itemname">
@@ -25,13 +25,7 @@ const Cartpage = () => {
                         <p className="itemdescription">
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde aliquid beatae, quibusdam velit laborum dolorem distinctio labore.
                         </p>
-                        <div className="rating">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        </div>
+                        <p className="rating"><span style={{color:"grey"}}>rating {item.rating}.0</span><i class="fa-solid fa-star"></i></p>
                     </div>
 
                     <div className="button">

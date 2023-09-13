@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 import Layout from '../components/Layout';
 import Banner from '../components/Banner';
 import { Context } from '../context/Appcontext';
@@ -7,7 +7,16 @@ import Product from '../components/Product';
 
 const Productspage = () => {
 
-  const {shoes}=useContext(Context)
+  const {products,setproducts}=useContext(Context)
+
+    useEffect(() => {
+        fetch('http://localhost:3001/api/products',{method:"GET"})
+        .then(res => res.json())
+        .then(data => {
+            setproducts(data.shoes)
+        })
+        .catch(err =>console.log(err))
+    }, []);
 
   return (
     <Layout>
@@ -16,7 +25,7 @@ const Productspage = () => {
         <div id="Products">
           <div className="page">
             <div className="productgrid">
-              {shoes && shoes.map(shoe => <Product shoe={shoe} />)}
+              {products && products.map(shoe => <Product shoe={shoe} />)}
             </div>
           </div>
         </div>

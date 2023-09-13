@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Croissant+One&family=Poppins:wght@300;400;500;600;700&display=swap");
+@import url("./_media.scss");
 * {
   margin: 0;
   padding: 0;
@@ -72,7 +73,14 @@ nav > a {
 }
 nav ul {
   display: flex;
-  gap: 1.5rem;
+  gap: 1.25rem;
+}
+nav ul > span {
+  display: none;
+}
+nav ul > span i {
+  color: #fff;
+  font-size: 1rem;
 }
 nav ul a {
   text-decoration: none;
@@ -362,6 +370,10 @@ footer .copy {
   background-size: cover;
 }
 
+.bannerpadding {
+  height: 70px;
+}
+
 .about {
   padding: 5rem 0;
   flex-direction: row-reverse;
@@ -472,7 +484,8 @@ footer .copy {
   color: grey;
   font-size: 0.85rem;
 }
-.contact form .control input, .contact form .control textarea {
+.contact form .control input,
+.contact form .control textarea {
   width: 100%;
   padding: 0.5rem;
   display: block;
@@ -588,4 +601,34 @@ footer .copy {
   display: flex;
   gap: 1rem;
   padding-left: 1rem;
+}
+
+.form {
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, 50%);
+  width: 100%;
+  max-width: 400px;
+  padding: 2rem 1rem;
+}
+.form form .control {
+  display: flex;
+  flex-direction: column-reverse;
+  padding: 0.7rem 0;
+}
+.form form .control input {
+  width: 100%;
+  padding: 0.5rem;
+  outline: none;
+}
+.form form .control label {
+  font-size: 0.85rem;
+  color: grey;
+}
+.form form .click {
+  position: relative;
+  display: inline-block;
+  left: 50%;
+  transform: translateX(-50%);
 }/*# sourceMappingURL=App.css.map */

@@ -17,7 +17,7 @@ const Footer = () => {
             <a href="#">FAQ</a>
         </ul>
     </div>
-    <p class="copy">Copyright&copy;Bernard dwumfour 2023</p>
+    <p className="copy">Copyright&copy;Bernard dwumfour 2023</p>
 </footer>
   )
 }

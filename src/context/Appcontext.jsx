@@ -18,25 +18,39 @@ import side2 from '../images/side2.jpg'
 
 export const Context = createContext([])
 const Appcontext = ({ children }) => {
-
   const [shoes, setshoes] = useState([
-    { image: shoe1, name: "Shoename", price: 270, rating: 4, },
-    { image: shoe2, name: "Shoename", price: 340, rating: 5, },
-    { image: shoe3, name: "Shoename", price: 230, rating: 5, },
-    { image: shoe4, name: "Shoename", price: 190, rating: 5, },
-    { image: shoe5, name: "Shoename", price: 170, rating: 4, },
-    { image: shoe6, name: "Shoename", price: 220, rating: 5, },
-    { image: shoe7, name: "Shoename", price: 270, rating: 4, },
-    { image: shoe8, name: "Shoename", price: 340, rating: 5, },
-    { image: shoe9, name: "Shoename", price: 230, rating: 5, },
-    { image: shoe10, name: "Shoename", price: 190, rating: 5, },
-    { image: shoe11, name: "Shoename", price: 170, rating: 4, },
-    { image: shoe12, name: "Shoename", price: 220, rating: 5, }
+    { image: "shoe1", name: "Shoenamedata", price: 270, rating: 4, },
+    { image: "shoe2", name: "Shoenamedata", price: 340, rating: 5, },
+    { image: "shoe3", name: "Shoenamedata", price: 230, rating: 5, },
+    { image: "shoe4", name: "Shoenamedata", price: 190, rating: 5, },
+    { image: "shoe5", name: "Shoenamedata", price: 170, rating: 4, },
+    { image: "shoe6", name: "Shoenamedata", price: 220, rating: 5, },
+    { image: "shoe7", name: "Shoenamedata", price: 270, rating: 4, },
+    { image: "shoe8", name: "Shoenamedata", price: 340, rating: 5, },
+    { image: "shoe9", name: "Shoenamedata", price: 230, rating: 5, },
+    { image: "shoe10", name: "Shoenamedata", price: 190, rating: 5, },
+    { image: "shoe11", name: "Shoenamedata", price: 170, rating: 4, },
+    { image: "shoe12", name: "Shoenamedata", price: 220, rating: 5, }
   ]);
 
+  const [products,setproducts]=useState([
+    { image: "shoe1", name: "Shoenamedata", price: 270, rating: 4, },
+    { image: "shoe2", name: "Shoenamedata", price: 340, rating: 5, },
+    { image: "shoe3", name: "Shoenamedata", price: 230, rating: 5, },
+    { image: "shoe4", name: "Shoenamedata", price: 190, rating: 5, },
+    { image: "shoe5", name: "Shoenamedata", price: 170, rating: 4, },
+    { image: "shoe6", name: "Shoenamedata", price: 220, rating: 5, },
+    { image: "shoe7", name: "Shoenamedata", price: 270, rating: 4, },
+    { image: "shoe8", name: "Shoenamedata", price: 340, rating: 5, },
+    { image: "shoe9", name: "Shoenamedata", price: 230, rating: 5, },
+    { image: "shoe10", name: "Shoenamedata", price: 190, rating: 5, },
+    { image: "shoe11", name: "Shoenamedata", price: 170, rating: 4, },
+    { image: "shoe12", name: "Shoenamedata", price: 220, rating: 5, }
+  ])
+
   const [sideimages, setsideimages] = useState([
-    { image: side1, name: "Shoename", price: 275, rating: 4, },
-    { image: side2, name: "Shoename", price: 280, rating: 5, },
+    { image: side1, name: "Shoenamedata", price: 275, rating: 4, },
+    { image: side2, name: "Shoenamedata", price: 280, rating: 5, },
   ])
 
   const [cart, setCart] = useState([])
@@ -49,7 +63,7 @@ const Appcontext = ({ children }) => {
     }, 1500);
   }
 
-  const [user, setuser] = useState(null)
+  const [user, setuser] = useState("null")
 
   const authenticate = () => {
     if (!user) {
@@ -84,6 +98,11 @@ const Appcontext = ({ children }) => {
 
     if (authenticated) {
       setCart([])
+      fetch('http://localhost:3001/api/orders/',{
+        method:"POST",
+        Headers:{"Content-type":"application/json"},
+        body:JSON.stringify("Success")
+      })
       displayinfo("Order made successfully")
     } else {
       displayinfo("Please log in to continue shopping")
@@ -100,7 +119,11 @@ const Appcontext = ({ children }) => {
       info,
       orderitems,
       user,
-      sideimages
+      sideimages,
+      setsideimages,
+      setshoes,
+      products,
+      setproducts
     }}>
       {children}
     </Context.Provider>

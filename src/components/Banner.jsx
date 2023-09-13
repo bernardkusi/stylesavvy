@@ -3,7 +3,7 @@ import React from 'react'
 const Banner = ({page}) => {
     return (
         <>
-        <div style={{height:"70px"}}></div>
+        <div className='bannerpadding'></div>
         <div className="banner">
             <div className="page">
                 <h3 className="heading" style={{ textAlign: "left" }}>{page}</h3>

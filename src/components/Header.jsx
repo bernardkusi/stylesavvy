@@ -9,11 +9,12 @@ const Header = () => {
       <Link to='/' className="logo">StyleSavvy</Link>
 
       <ul style={{ alignItems: "center" }}>
-        <Link to='/cart' style={{ fontSize: "1.1rem" }}> <i class="fa-solid fa-cart-shopping"><sup>{cart.length}</sup></i></Link>
-        {user ? <Link to='/cart' style={{ fontSize: "1.1rem" }}> <i class="fa-solid fa-user"></i></Link>
-        : <Link to='/signin' style={{ fontSize: "1.1rem" }}> <i class="fa-solid fa-right-to-bracket"></i></Link>}
+        <Link to='/cart' style={{ fontSize: "1.1rem" }}> <i className="fa-solid fa-cart-shopping"><sup>{cart.length}</sup></i></Link>
+        {user ? <Link to='/cart' style={{ fontSize: "1.1rem" }}> <i className="fa-solid fa-user"></i></Link>
+        : <Link to='/signin' style={{ fontSize: "1.1rem" }}> <i className="fa-solid fa-right-to-bracket"></i></Link>}
+        <span><i class="fa-solid fa-bars"></i></span>
       </ul>
-      <ul>
+      <ul className='links'>
         <NavLink
           to="/"
           className={({ isActive, isPending }) =>

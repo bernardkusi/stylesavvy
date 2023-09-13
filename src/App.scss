@@ -12,7 +12,7 @@ $mainfont: 'Croissant One', cursive;
 
 .click {
     padding: .7rem 1.3rem;
-    background: lighten($primary,3);
+    background: lighten($primary, 3);
     color: #fff;
     text-decoration: none;
     font-weight: 500;
@@ -21,8 +21,8 @@ $mainfont: 'Croissant One', cursive;
     border: none;
     outline: none;
 
-    &:hover{
-        background: darken($primary,10);
+    &:hover {
+        background: darken($primary, 10);
     }
 }
 
@@ -79,7 +79,15 @@ nav {
 
     ul {
         display: flex;
-        gap: 1.5rem;
+        gap: 1.25rem;
+
+        &>span {
+            display: none;
+            i {
+                color: #fff;
+                font-size: 1rem;
+            }
+        }
 
         a {
             text-decoration: none;
@@ -89,12 +97,13 @@ nav {
             &:hover,
             &.active {
                 color: $primary;
-                sup{
+
+                sup {
                     color: #fff;
                 }
             }
 
-            sup{
+            sup {
                 background: $primary;
                 border-radius: 50%;
                 padding: 0 .35rem;
@@ -104,7 +113,7 @@ nav {
     }
 }
 
-.info{
+.info {
     position: fixed;
     width: 90%;
     max-width: 800px;
@@ -198,12 +207,14 @@ main {
                         display: flex;
                         align-items: center;
                         gap: .2rem;
+
                         span {
                             font-size: .8rem;
                             color: rgb(145, 145, 145);
 
                         }
-                        i{
+
+                        i {
                             color: rgb(255, 213, 0);
                             font-size: .8rem;
                         }
@@ -246,12 +257,14 @@ main {
                             display: flex;
                             align-items: center;
                             gap: .2rem;
+
                             span {
                                 font-size: .8rem;
                                 color: rgb(145, 145, 145);
 
                             }
-                            i{
+
+                            i {
                                 color: rgb(255, 213, 0);
                                 font-size: .8rem;
                             }
@@ -341,7 +354,7 @@ main {
                 }
             }
 
-            .image{
+            .image {
                 border: 8px solid #ffffff94;
             }
         }
@@ -425,6 +438,11 @@ footer {
     background-image: linear-gradient(rgba(0, 0, 0, .55), rgba(0, 0, 0, .55)), url(./images/banner.jpg);
     background-position: center;
     background-size: cover;
+
+}
+
+.bannerpadding {
+    height: 70px;
 }
 
 .about {
@@ -497,9 +515,10 @@ footer {
     }
 }
 
-#map{
+#map {
     padding: 3rem 0;
-    .map{
+
+    .map {
         width: 100%;
         height: 30rem;
         background: lightgrey;
@@ -538,7 +557,7 @@ footer {
         padding: 1.5rem 1rem;
         border-radius: .7rem;
 
-        .label{
+        .label {
             color: $primary;
             text-align: center;
             font-size: 1.25rem;
@@ -558,7 +577,8 @@ footer {
                 font-size: .85rem;
             }
 
-            input,textarea {
+            input,
+            textarea {
                 width: 100%;
                 padding: .5rem;
                 display: block;
@@ -568,7 +588,7 @@ footer {
                 resize: none;
             }
 
-            textarea{
+            textarea {
                 height: 4rem;
             }
 
@@ -582,8 +602,9 @@ footer {
     }
 }
 
-#Products{
+#Products {
     padding: 5rem 0;
+
     .productgrid {
         // background: yellow;
         display: grid;
@@ -592,6 +613,7 @@ footer {
 
         .product {
             flex: none;
+
             .image {
                 height: 180px;
                 background: lightgrey;
@@ -609,7 +631,8 @@ footer {
                         font-size: .8rem;
                         color: rgb(145, 145, 145);
                     }
-                    i{
+
+                    i {
                         color: rgb(255, 213, 0);
                         font-size: .8rem;
                     }
@@ -632,48 +655,48 @@ footer {
 
 }
 
-.cartflex{
+.cartflex {
     display: flex;
     flex-direction: column;
     gap: 2rem;
     padding: 1em;
     border: 1px solid lightgrey;
 
-    .cart{
+    .cart {
         display: flex;
         justify-content: space-between;
         padding: 1rem;
         gap: 2rem;
 
-        .image{
+        .image {
             width: 300px;
             height: 180px;
             background: lightgrey;
         }
 
-        .details{
+        .details {
             display: flex;
             flex-direction: column;
             justify-content: center;
             padding-bottom: 2rem;
 
-            .itemname{
+            .itemname {
                 color: $primary;
                 font-size: .95rem;
                 font-weight: 600;
             }
 
-            .itemprice{
+            .itemprice {
                 color: grey;
                 font-size: .95rem;
             }
 
-            .itemdescription{
+            .itemdescription {
                 font-size: .8rem;
                 color: rgb(155, 155, 155);
             }
 
-            .rating{
+            .rating {
                 color: rgb(255, 213, 0);
                 padding: .5rem 0;
                 display: flex;
@@ -681,20 +704,61 @@ footer {
             }
         }
 
-        .button{
+        .button {
             width: max-content;
             display: flex;
             align-items: center;
-            .click{
+
+            .click {
                 width: max-content;
             }
         }
     }
 
-    .buttons{
+    .buttons {
         display: flex;
         gap: 1rem;
         padding-left: 1rem;
 
     }
 }
+
+.form {
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, 50%);
+    width: 100%;
+    max-width: 400px;
+    padding: 2rem 1rem;
+
+    form {
+
+        .control {
+            display: flex;
+            flex-direction: column-reverse;
+            padding: .7rem 0;
+
+            input {
+                width: 100%;
+                padding: .5rem;
+                outline: none;
+            }
+
+            label {
+                font-size: .85rem;
+                color: grey;
+            }
+
+        }
+
+        .click {
+            position: relative;
+            display: inline-block;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+}
+
+@import url('./_media.scss');

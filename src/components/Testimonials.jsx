@@ -5,8 +5,8 @@ const Testimonials = () => {
     return (
         <div id="testimonials">
             <div className="page">
-                <h3 class="heading" style={{ textAlign: "left" }}>About Us</h3>
-                <p class="subheading" style={{ textAlign: "left", color: "#fff" }}>Merging Fashion-forward Designs with Premium Materials</p>
+                <h3 className="heading" style={{ textAlign: "left" }}>About Us</h3>
+                <p className="subheading" style={{ textAlign: "left", color: "#fff" }}>Merging Fashion-forward Designs with Premium Materials</p>
                 <div className="testimonial">
                     <div>
                         <div className="image">
@@ -19,11 +19,11 @@ const Testimonials = () => {
                                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique et debitis dignissimos. Veniam vero, laudantium enim accusamus quae quos.
                                 </p>
                                 <div className="stars">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
+                                    <i className="fa-solid fa-star"></i>
+                                    <i className="fa-solid fa-star"></i>
+                                    <i className="fa-solid fa-star"></i>
+                                    <i className="fa-solid fa-star"></i>
+                                    <i className="fa-solid fa-star"></i>
                                 </div>
                             </div>
                         </div>

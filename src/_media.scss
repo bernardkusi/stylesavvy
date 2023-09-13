@@ -1,0 +1,115 @@
+@media (max-width:950px) {
+    #products {
+        & .page>div {
+            .productsgrid {
+                grid-template-columns: repeat(2, 1fr) !important;
+            }
+        }
+    }
+}
+
+@media (max-width:750px) {
+    #products {
+        & .page>div {
+            flex-direction: column;
+
+            .image {
+                width: 100% !important;
+                height: 200px !important;
+
+                .details {
+                    bottom: 1rem !important;
+                    right: 1rem !important;
+                    transform: scale(.7);
+                }
+            }
+        }
+    }
+
+    #about {
+        .aboutflex {
+            flex-direction: column;
+
+            &>div {
+                width: 100% !important;
+                max-width: 100% !important;
+            }
+        }
+    }
+
+    #testimonials {
+        .testimonial {
+            height: max-content !important;
+
+            &>div {
+
+                .details,
+                .image {
+                    max-width: 115%;
+                    padding: 0 !important;
+                    padding-top: 1rem !important;
+                }
+
+                flex-direction: column !important;
+                align-items: center;
+            }
+        }
+    }
+
+    nav {
+        .links {
+            display: none !important;
+        }
+
+    }
+
+    nav ul{
+        &>span{
+        display: inline-block !important;
+        }
+    }
+    
+
+    .bannerpadding {
+        height: 50px !important;
+    }
+
+    footer {
+        &>div {
+            flex-direction: column;
+            align-items: flex-start !important;
+        }
+    }
+}
+
+@media (max-width:550px) {
+    .page {
+        padding: 4rem .85rem 3rem !important;
+    }
+
+    nav {
+        height: 50px !important;
+        padding: .5rem 1rem !important;
+    }
+
+    #products {
+        & .page>div {
+            .productsgrid {
+                gap: 3rem .7rem !important;
+
+                .product{
+                    .image{
+                        height: 120px !important;
+                    }
+                }
+
+            }
+        }
+    }
+
+    main {
+        #hero {
+            padding: 7rem 1rem !important;
+        }
+    }
+}

@@ -14,7 +14,7 @@ const Products = ({ shoes, batch, sideimage }) => {
                         <img src={sideimage.image} alt={sideimage.name} style={{ filter: "brightness(80%)", position: "absolute" }} />
                         <div className="details">
                             <p className="name">Nike Shoes</p>
-                            <p className="rating"><span>rating </span>{sideimage.rating}.0<i class="fa-solid fa-star"></i></p>
+                            <p className="rating"><span>rating </span>{sideimage.rating}.0<i className="fa-solid fa-star"></i></p>
                             <p className="price">${sideimage.price}</p>
                             <button onClick={() => addtocart(sideimage)} className="click">Buy now</button>
                         </div>
@@ -22,7 +22,7 @@ const Products = ({ shoes, batch, sideimage }) => {
                     <div className="productsgrid">
                         {shoes && shoes.map((shoe, index) => {
                             if ((index >= 6 * batch) && (index < (6 * (batch + 1)))) {
-                                return <Product shoe={shoe} />
+                                return <Product key={index} shoe={shoe} />
                             }
                         })}
                     </div>
